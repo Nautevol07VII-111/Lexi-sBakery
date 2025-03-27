@@ -6,8 +6,6 @@
     <title>Petal &amp; Pastry</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <!-- Square Payment SDK -->
-    <script src="https://sandbox.web.squarecdn.com/v1/square.js"></script>
 </head>
 <body>
     <header class="site-header">
@@ -63,7 +61,13 @@
         <section id="order" class="order-section">
             <div class="container">
                 <h2 class="section-title">Place Your Order</h2>
-                <form id="order-form" class="order-form" action="https://formsubmit.co/your-email@example.com" method="POST">
+                <form id="order-form" class="order-form" action="https://formsubmit.co/petalandpastry1@gmail.com" method="POST">
+                    <!-- Form protection - Honeypot field to prevent spam -->
+                    <input type="text" name="_honey" style="display:none">
+                    <!-- Hidden fields for FormSubmit configuration -->
+                    <input type="hidden" name="_subject" value="New Order from Petal & Pastry Website">
+                    <input type="hidden" name="_next" value="thank-you.html">
+                    
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" required>
@@ -90,13 +94,30 @@
                         <label for="order-description">Describe Your Order</label>
                         <textarea id="order-description" name="order-description" rows="5" placeholder="Please describe what you'd like to order in detail..."></textarea>
                     </div>
-                    <div id="payment-form">
-                        <div class="form-group">
-                            <label for="card-container">Payment Information</label>
-                            <div id="card-container"></div>
-                            <div id="payment-status-container"></div>
+                    
+                    <!-- Payment Information Section -->
+                    <div class="form-group">
+                        <label>Payment Information</label>
+                        <div class="payment-info-box">
+                            <p>Please contact us at <strong>petalandpastry1@gmail.com</strong> for payment arrangements after submitting your order.</p>
+                            <p>We accept the following payment methods:</p>
+                            <div class="payment-methods">
+                                <div class="payment-method">
+                                    <i class="fab fa-cash-register"></i> Cash App
+                                </div>
+                                <div class="payment-method">
+                                    <i class="fas fa-money-bill-wave"></i> Zelle
+                                </div>
+                                <div class="payment-method">
+                                    <i class="fab fa-apple-pay"></i> Apple Pay
+                                </div>
+                                <div class="payment-method">
+                                    <i class="fab fa-paypal"></i> PayPal
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    
                     <button type="submit" id="submit-order" class="btn-primary">Submit Order</button>
                 </form>
             </div>
@@ -112,7 +133,7 @@
                 <div class="footer-info">
                     <p>Petal &amp; Pastry, 123 Pastry Lane</p>
                     <p>Phone: (555) 123-4567</p>
-                    <p>Email: hello@petalandpastry.com</p>
+                    <p>Email: petalandpastry1@gmail.com</p>
                 </div>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -126,6 +147,18 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Mobile navigation toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const navLinks = document.getElementById('nav-links');
+            
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('show');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
