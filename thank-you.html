@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Petal &amp; Pastry</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="logo">
+                <h1>Petal <span class="ampersand">&amp;</span> Pastry</h1>
+            </div>
+            <nav>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#menu">Menu</a></li>
+                    <li><a href="index.html#order">Order Online</a></li>
+                    <li><a href="index.html#gifts">Gift Cards</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="thank-you-section">
+            <div class="container">
+                <div class="thank-you-content">
+                    <i class="fas fa-check-circle success-icon"></i>
+                    <h2>Thank You for Your Order!</h2>
+                    <p>We've received your request and will be in touch shortly to confirm the details.</p>
+                    <p>If you selected an alternative payment method, we'll send you payment instructions in our confirmation email.</p>
+                    <a href="index.html" class="btn-primary">Return to Homepage</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>Petal &amp; Pastry</h2>
+                </div>
+                <div class="footer-info">
+                    <p>Petal &amp; Pastry, 123 Pastry Lane</p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: petalandpastry1@gmail.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Petal &amp; Pastry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile navigation toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const navToggle = document.getElementById('nav-toggle');
+            const navLinks = document.getElementById('nav-links');
+            
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', function() {
+                    navLinks.classList.toggle('show');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
