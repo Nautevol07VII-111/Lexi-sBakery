@@ -363,6 +363,37 @@ header .container {
     min-height: 120px;
 }
 
+/* Payment Information Box Styles */
+.payment-info-box {
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.payment-method i {
+    font-size: 1.2rem;
+    color: #555;
+}
+
 /* Square Payment Styles */
 #card-container {
     min-height: 100px;
@@ -376,6 +407,27 @@ header .container {
     margin-top: 10px;
     color: #c53030;
     font-size: 14px;
+}
+
+/* ===== THANK YOU PAGE STYLES ===== */
+.thank-you-section {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.thank-you-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.success-icon {
+    font-size: 64px;
+    color: #4CAF50;
+    margin-bottom: 20px;
 }
 
 /* ===== FOOTER STYLES ===== */
